@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.integer "qty_to_adjust"
     t.integer "user_id"
     t.string "created_by"
+    t.string "total_dollars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.boolean "on_order?"
     t.boolean "received?"
     t.string "received_by"
+    t.string "total_dollars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -90,7 +92,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.string "user_id"
     t.string "message"
     t.string "create_by"
-    t.string "To_userName"
+    t.string "to_username"
     t.boolean "task_completed?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -104,6 +106,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.string "quote"
     t.string "role"
     t.string "chatId"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

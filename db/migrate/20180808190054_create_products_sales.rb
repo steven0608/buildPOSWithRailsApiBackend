@@ -6,6 +6,7 @@ class CreateProductsSales < ActiveRecord::Migration[5.2]
       t.integer :qty
       t.integer :total
       t.integer :total_saving
+    
 
       t.timestamps
     end

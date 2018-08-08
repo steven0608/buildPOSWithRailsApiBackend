@@ -4,7 +4,7 @@ class CreateTodolists < ActiveRecord::Migration[5.2]
       t.string :user_id
       t.string :message
       t.string :create_by
-      t.string :To_userName
+      t.string :to_username
       t.boolean :task_completed?
 
       t.timestamps

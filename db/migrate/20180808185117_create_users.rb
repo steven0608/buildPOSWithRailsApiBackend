@@ -8,6 +8,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :quote
       t.string :role
       t.string :chatId
+      t.string :status
+    
 
       t.timestamps
     end

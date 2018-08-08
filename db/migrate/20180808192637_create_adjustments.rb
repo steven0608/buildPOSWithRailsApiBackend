@@ -7,6 +7,8 @@ class CreateAdjustments < ActiveRecord::Migration[5.2]
       t.integer :qty_to_adjust
       t.integer :user_id
       t.string :created_by
+      t.string :total_dollars
+
 
       t.timestamps
     end

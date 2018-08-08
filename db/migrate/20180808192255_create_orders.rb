@@ -11,6 +11,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.boolean :on_order?
       t.boolean :received?
       t.string :received_by
+      t.string :total_dollars
 
       t.timestamps
     end
