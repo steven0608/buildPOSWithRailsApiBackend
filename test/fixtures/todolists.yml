@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  message: MyString
+  create_by: MyString
+  To_userName: MyString
+  task_completed?: false
+
+two:
+  user_id: MyString
+  message: MyString
+  create_by: MyString
+  To_userName: MyString
+  task_completed?: false

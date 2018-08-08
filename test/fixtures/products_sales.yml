@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sales_transcation_id: 1
+  product_id: 1
+  qty: 1
+  total: 1
+  total_saving: 1
+
+two:
+  sales_transcation_id: 1
+  product_id: 1
+  qty: 1
+  total: 1
+  total_saving: 1

@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  item_name: MyString
+  retail_price: 1
+  pomo_price: 1
+  most_recent_vendor: MyString
+  created_by: MyString
+  order: 1
+  inventory: 1
+  adjustment: 1
+  status: MyString
+  sales: 1
+  forecast_sales_three_months: 1
+  need_to_order_for_next_three_months: 1
+  annualized_sales: 1
+  annualized_qty: 1
+  category: MyString
+  image_url: MyString
+  last_edited_by: MyString
+  last_cost: 1
+  barcode: 1
+
+two:
+  user_id: 1
+  item_name: MyString
+  retail_price: 1
+  pomo_price: 1
+  most_recent_vendor: MyString
+  created_by: MyString
+  order: 1
+  inventory: 1
+  adjustment: 1
+  status: MyString
+  sales: 1
+  forecast_sales_three_months: 1
+  need_to_order_for_next_three_months: 1
+  annualized_sales: 1
+  annualized_qty: 1
+  category: MyString
+  image_url: MyString
+  last_edited_by: MyString
+  last_cost: 1
+  barcode: 1

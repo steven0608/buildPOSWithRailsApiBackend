@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total: 1
+  total_saving: 1
+  user_id: 1
+  cash_from_customer: 1
+  change_to_customer: 1
+
+two:
+  total: 1
+  total_saving: 1
+  user_id: 1
+  cash_from_customer: 1
+  change_to_customer: 1

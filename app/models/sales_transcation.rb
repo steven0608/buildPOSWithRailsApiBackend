@@ -1,0 +1,2 @@
+class SalesTranscation < ApplicationRecord
+end
