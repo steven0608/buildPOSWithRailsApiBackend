@@ -7,7 +7,8 @@ class CreateTodolists < ActiveRecord::Migration[5.2]
       t.string :to_username
       t.boolean :task_completed?
 
-      t.timestamps
+      t.datetime :created_at, null: false
+      t.datetime :updated_at, null: false
     end
   end
 end

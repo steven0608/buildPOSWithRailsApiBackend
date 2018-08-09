@@ -2,7 +2,8 @@ class Api::V1::UsersController < ApplicationController
   before_action :find_user, only: [:update,:show]
 def index
   @users = User.all
-  render json: @users
+  render json: @users.to_json(include: [:adjustments, :orders, :products,:sales_transcations,:todolists]), status: 200
+  # .to_json(include: :todolists)
   # .to_json(include: :adjustments, :orders, :products, :products_sales,:sales_transcations,:todolists),status: 200
 end
 

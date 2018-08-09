@@ -3,7 +3,7 @@ class Api::V1::SalesTranscationsController < ApplicationController
 
 def index
   @sales_transcations = SalesTranscation.all
-  render json: @sales_transcations, status: 200
+  render json: @sales_transcations.to_json(include: :products_sales), status: 200
 end
 
 def show

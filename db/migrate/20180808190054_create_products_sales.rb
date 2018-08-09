@@ -6,9 +6,10 @@ class CreateProductsSales < ActiveRecord::Migration[5.2]
       t.integer :qty
       t.integer :total
       t.integer :total_saving
-    
 
-      t.timestamps
+
+      t.datetime :created_at, null: false
+      t.datetime :updated_at, null: false
     end
   end
 end

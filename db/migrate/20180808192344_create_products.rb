@@ -22,7 +22,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :last_cost
       t.integer :barcode
 
-      t.timestamps
+      t.datetime :created_at, null: false
+      t.datetime :updated_at, null: false
     end
   end
 end

@@ -7,7 +7,8 @@ class CreateSalesTranscations < ActiveRecord::Migration[5.2]
       t.integer :cash_from_customer
       t.integer :change_to_customer
 
-      t.timestamps
+      t.datetime :created_at, null: false
+      t.datetime :updated_at, null: false
     end
   end
 end

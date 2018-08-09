@@ -9,9 +9,10 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :role
       t.string :chatId
       t.string :status
-    
 
-      t.timestamps
+
+      t.datetime :created_at, null: false
+      t.datetime :updated_at, null: false
     end
   end
 end

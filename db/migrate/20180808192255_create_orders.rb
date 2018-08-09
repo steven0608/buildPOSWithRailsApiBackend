@@ -13,7 +13,8 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :received_by
       t.string :total_dollars
 
-      t.timestamps
+      t.datetime :created_at, null: false
+      t.datetime :updated_at, null: false
     end
   end
 end
