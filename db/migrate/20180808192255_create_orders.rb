@@ -8,8 +8,8 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :vendor_name
       t.integer :user_id
       t.string :order_by
-      t.boolean :on_order?
-      t.boolean :received?
+      t.boolean :on_order
+      t.boolean :received
       t.string :received_by
       t.string :total_dollars
 

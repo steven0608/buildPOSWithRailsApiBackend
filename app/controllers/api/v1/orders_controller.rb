@@ -30,7 +30,7 @@ end
 private
 
 def order_params
-  params.permit(:product_id,:product_name,:qty,:price,:vendor_name,:user_id,:order_by,:on_order?,:received?,:received_by,:total_dollars)
+  params.permit(:product_id,:product_name,:qty,:price,:vendor_name,:user_id,:order_by,:on_order,:received,:received_by,:total_dollars)
 end
 
 def find_order

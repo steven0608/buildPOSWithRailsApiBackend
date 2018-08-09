@@ -30,7 +30,7 @@ end
 private
 
 def toDolist_params
-  params.permit(:user_id,:message,:create_by,:to_username,:task_completed?)
+  params.permit(:user_id,:message,:create_by,:to_username,:task_completed)
 end
 
 def find_toDoList
