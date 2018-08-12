@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first
 
-steven = User.create(username:"admin",created_by_username:"admin",created_by_userID:1,password:"admin",quote:"My first day",role:"admin manager",chatId:"admin1",status:"active")
+steven = User.create(username:"admin",created_by_username:"admin",created_by_userID:1,password:"admin",quote:"My first day",role:"admin manager",status:"active")
 Todolist.create(user_id:1,message:"testing",create_by:"admin",to_username:"Steven",task_completed:false)
 SalesTranscation.create(total:10,total_saving:2,user_id:1,cash_from_customer:0,change_to_customer:0)
 Product.create(user_id:1,item_name:"apple",retail_price:10,most_recent_vendor:"best Vendor",created_by:"admin",order:1,inventory:10,adjustment:-1,status:"active",sales:10,forecast_sales_three_months:2,need_to_order_for_next_three_months:1,annualized_sales:100,annualized_qty:5,category:"food",image_url:"https://images.idgesg.net/images/article/2018/07/apple-6-color-logo-100763179-large.jpg",last_edited_by:"admin",last_cost:2,barcode:1263527635)

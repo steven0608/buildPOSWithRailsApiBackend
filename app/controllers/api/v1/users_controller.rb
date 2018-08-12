@@ -27,7 +27,7 @@ end
 private
 
 def user_params
-  params.permit(:username,:created_by_username,:created_by_userID,:password,:quote,:role,:chatId,:status)
+  params.permit(:username,:created_by_username,:created_by_userID,:password,:quote,:role,:status)
 end
 
 def find_user

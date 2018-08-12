@@ -105,7 +105,6 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.string "password_digest"
     t.string "quote"
     t.string "role"
-    t.string "chatId"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

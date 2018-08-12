@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :password_digest
       t.string :quote
       t.string :role
-      t.string :chatId
       t.string :status
 
 
