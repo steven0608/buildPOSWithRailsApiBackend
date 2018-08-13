@@ -23,9 +23,9 @@ def update
  end
 end
 
-# def destroy
-#   find_toDoList.destroy
-# end
+def destroy
+  find_toDoList.destroy
+end
 
 private
 
