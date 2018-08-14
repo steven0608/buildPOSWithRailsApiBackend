@@ -6,6 +6,9 @@ class CreateProductsSales < ActiveRecord::Migration[5.2]
       t.integer :qty
       t.integer :total
       t.integer :total_saving
+      t.string  :product_name
+      t.integer :retail_price
+      t.integer :pomo_price
 
 
       t.datetime :created_at, null: false

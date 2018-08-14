@@ -74,6 +74,9 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.integer "qty"
     t.integer "total"
     t.integer "total_saving"
+    t.string "product_name"
+    t.integer "retail_price"
+    t.integer "pomo_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

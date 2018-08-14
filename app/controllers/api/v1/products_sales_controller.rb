@@ -30,7 +30,7 @@ end
 private
 
 def productSale_params
-  params.permit(:sales_transcation_id,:product_id,:qty,:total,:total_saving)
+  params.permit(:sales_transcation_id,:product_id,:qty,:total,:total_saving,:product_name,:retail_price,:pomo_price)
 end
 
 def find_productSale
