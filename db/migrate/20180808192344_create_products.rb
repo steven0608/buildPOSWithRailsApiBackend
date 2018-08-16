@@ -21,6 +21,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :last_edited_by
       t.integer :last_cost
       t.integer :barcode
+      t.string :unit
 
       t.datetime :created_at, null: false
       t.datetime :updated_at, null: false

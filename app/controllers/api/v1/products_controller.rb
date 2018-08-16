@@ -31,7 +31,7 @@ end
 private
 
 def product_params
-  params.permit(:user_id,:item_name,:retail_price,:pomo_price,:most_recent_vendor,:created_by,:order,:inventory,:adjustment,:status,:sales,:forecast_sales_three_months,:need_to_order_for_next_three_months,:annualized_sales,:annualized_qty,:category,:image_url,:last_edited_by,:last_cost,:barcode)
+  params.permit(:user_id,:item_name,:retail_price,:pomo_price,:most_recent_vendor,:created_by,:order,:inventory,:adjustment,:status,:sales,:forecast_sales_three_months,:need_to_order_for_next_three_months,:annualized_sales,:annualized_qty,:category,:image_url,:last_edited_by,:last_cost,:barcode,:unit)
 end
 
 def find_product
