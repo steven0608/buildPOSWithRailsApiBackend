@@ -3,8 +3,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
     create_table :products do |t|
       t.integer :user_id
       t.string :item_name
-      t.integer :retail_price
-      t.integer :pomo_price
+      t.decimal :retail_price
+      t.decimal :pomo_price
       t.string :most_recent_vendor
       t.string :created_by
       t.integer :order
@@ -19,7 +19,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :category
       t.string :image_url
       t.string :last_edited_by
-      t.integer :last_cost
+      t.decimal :last_cost
       t.integer :barcode
       t.string :unit
 

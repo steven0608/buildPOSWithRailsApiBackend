@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
 
   # please also set Username to be unique
-  validates :username, :password, presence: true
+  # validates :username, :password, presence: true
 
   has_secure_password
 end

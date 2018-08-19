@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.integer "qty_to_adjust"
     t.integer "user_id"
     t.string "created_by"
-    t.string "total_dollars"
+    t.decimal "total_dollars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,15 +30,15 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
   create_table "orders", force: :cascade do |t|
     t.integer "product_id"
     t.string "product_name"
-    t.integer "qty"
-    t.integer "price"
+    t.decimal "qty"
+    t.decimal "price"
     t.string "vendor_name"
     t.integer "user_id"
     t.string "order_by"
     t.boolean "on_order"
     t.boolean "received"
     t.string "received_by"
-    t.string "total_dollars"
+    t.decimal "total_dollars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
   create_table "products", force: :cascade do |t|
     t.integer "user_id"
     t.string "item_name"
-    t.integer "retail_price"
-    t.integer "pomo_price"
+    t.decimal "retail_price"
+    t.decimal "pomo_price"
     t.string "most_recent_vendor"
     t.string "created_by"
     t.integer "order"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
     t.string "category"
     t.string "image_url"
     t.string "last_edited_by"
-    t.integer "last_cost"
+    t.decimal "last_cost"
     t.integer "barcode"
     t.string "unit"
     t.datetime "created_at", null: false
@@ -72,22 +72,22 @@ ActiveRecord::Schema.define(version: 2018_08_08_193015) do
   create_table "products_sales", force: :cascade do |t|
     t.integer "sales_transcation_id"
     t.integer "product_id"
-    t.integer "qty"
-    t.integer "total"
-    t.integer "total_saving"
+    t.decimal "qty"
+    t.decimal "total"
+    t.decimal "total_saving"
     t.string "product_name"
-    t.integer "retail_price"
-    t.integer "pomo_price"
+    t.decimal "retail_price"
+    t.decimal "pomo_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sales_transcations", force: :cascade do |t|
-    t.integer "total"
-    t.integer "total_saving"
+    t.decimal "total"
+    t.decimal "total_saving"
     t.integer "user_id"
-    t.integer "cash_from_customer"
-    t.integer "change_to_customer"
+    t.decimal "cash_from_customer"
+    t.decimal "change_to_customer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
