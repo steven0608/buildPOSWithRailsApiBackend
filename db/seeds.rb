@@ -41,131 +41,131 @@ beef=Product.create(user_id:1,item_name:"beef",retail_price:10,pomo_price:8,most
 
 salad=Product.create(user_id:1,item_name:"Chicken Caesar salad",retail_price:10,pomo_price:8,most_recent_vendor:"best Vendor",created_by:"admin",order:0,inventory:0,adjustment:0,status:"active",sales:0,forecast_sales_three_months:2,need_to_order_for_next_three_months:1,annualized_sales:100,annualized_qty:5,category:"Salad",image_url:"https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--327831_11.jpg?itok=8GjuBS4F",unit:"lb",last_edited_by:"admin",last_cost:2,barcode:11)
 
-reason=["001 missing","002 expired","003 stolen","004 broken"]
-
-250.times do
-  SalesTranscation.create(total:10,total_saving:2,user_id:1,cash_from_customer:0,change_to_customer:0)
-end
-
-month=["2018-01-03","2018-02-03","2018-03-03","2018-04-03","2018-05-03","2018-06-03","2018-07-03","2018-08-03","2017-01-03","2017-02-03","2017-03-03","2017-04-03","2017-05-03","2017-06-03","2017-07-03","2017-08-03","2017-09-03","2017-10-03","2017-11-03","2017-12-03"]
-
-550.times do
-if rand(1..10)===1
-  date=month[rand(0..19)]
-
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:1,product_name:"apple",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
-  Order.create(product_id:1,product_name:"apple",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"apple",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
-  elsif rand(1..10)===2
-
-    date=month[rand(0..19)]
-    reasonCode=reason[rand(0..3)]
-    Adjustment.create(reason_code:reasonCode,product_id:2,product_name:"pear",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
-    Order.create(product_id:2,product_name:"pear",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
-    ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"pear",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
-elsif rand(1..10)===3
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:3,product_name:"strawberry",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
-  Order.create(product_id:3,product_name:"strawberry",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"strawberry",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
-elsif rand(1..10)===4
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:4,product_name:"pineapple",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
-  Order.create(product_id:4,product_name:"pineapple",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"pineapple",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
-elsif rand(1..10)===5
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:5,product_name:"tomato",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
-  Order.create(product_id:5,product_name:"tomato",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"tomato",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
-elsif rand(1..10)===6
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:6,product_name:"pepper",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
-  Order.create(product_id:6,product_name:"pepper",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"pepper",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
-elsif rand(1..10)===7
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:7,product_name:"fish",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
-  Order.create(product_id:7,product_name:"fish",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"fish",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
-elsif rand(1..10)===8
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:8,product_name:"chicken",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
-  Order.create(product_id:8,product_name:"chicken",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"chicken",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
-elsif rand(1..10)===9
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:9,product_name:"duck",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
-  Order.create(product_id:9,product_name:"duck",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"duck",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
-elsif rand(1..10)===10
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:10,product_name:"beef",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
-  Order.create(product_id:10,product_name:"beef",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"beef",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
-
-elsif rand(1..10)===11
-
-  date=month[rand(0..19)]
-  reasonCode=reason[rand(0..3)]
-  Adjustment.create(reason_code:reasonCode,product_id:11,product_name:"Chicken Caesar Salad",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
-  Order.create(product_id:11,product_name:"Chicken Caesar Salad",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
-  ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"Chicken Caesar salad",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
-end
-end
-
-SalesTranscation.all.each do |transcation|
-  month=["2018-01-03","2018-02-03","2018-03-03","2018-04-03","2018-05-03","2018-06-03","2018-07-03","2018-08-03","2017-01-03","2017-02-03","2017-03-03","2017-04-03","2017-05-03","2017-06-03","2017-07-03","2017-08-03","2017-09-03","2017-10-03","2017-11-03","2017-12-03"]
-  date=month[rand(0..19)]
-  transcation.update(total:transcation.products_sales.map do |sale|
-    sale.total
-  end.sum,
-  total_saving:transcation.products_sales.map do |sale|
-    sale.total_saving
-  end.sum,
-  cash_from_customer:transcation.products_sales.map do |sale|
-    sale.total
-  end.sum+20,
-  change_to_customer:20,
-  created_at:date,
-  updated_at:date)
-end
-
-
-Product.all.each do |product|
-  product.update(adjustment:product.adjustments.map do |adjustment|
-    adjustment.qty_to_adjust
-  end.sum,
-  sales:product.products_sales.map do |sale|
-    sale.qty
-  end.sum,
-  inventory:product.adjustments.map do |adjustment|
-    adjustment.qty_to_adjust
-  end.sum-product.products_sales.map do |sale|
-    sale.qty
-  end.sum
-)
-end
-
-
-
+# reason=["001 missing","002 expired","003 stolen","004 broken"]
+#
+# 250.times do
+#   SalesTranscation.create(total:10,total_saving:2,user_id:1,cash_from_customer:0,change_to_customer:0)
+# end
+#
+# month=["2018-01-03","2018-02-03","2018-03-03","2018-04-03","2018-05-03","2018-06-03","2018-07-03","2018-08-03","2017-01-03","2017-02-03","2017-03-03","2017-04-03","2017-05-03","2017-06-03","2017-07-03","2017-08-03","2017-09-03","2017-10-03","2017-11-03","2017-12-03"]
+#
+# 550.times do
+# if rand(1..10)===1
+#   date=month[rand(0..19)]
+#
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:1,product_name:"apple",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
+#   Order.create(product_id:1,product_name:"apple",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"apple",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
+#   elsif rand(1..10)===2
+#
+#     date=month[rand(0..19)]
+#     reasonCode=reason[rand(0..3)]
+#     Adjustment.create(reason_code:reasonCode,product_id:2,product_name:"pear",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
+#     Order.create(product_id:2,product_name:"pear",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
+#     ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"pear",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
+# elsif rand(1..10)===3
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:3,product_name:"strawberry",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
+#   Order.create(product_id:3,product_name:"strawberry",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"strawberry",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
+# elsif rand(1..10)===4
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:4,product_name:"pineapple",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
+#   Order.create(product_id:4,product_name:"pineapple",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"pineapple",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
+# elsif rand(1..10)===5
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:5,product_name:"tomato",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
+#   Order.create(product_id:5,product_name:"tomato",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"tomato",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
+# elsif rand(1..10)===6
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:6,product_name:"pepper",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:2,created_at:date,updated_at:date)
+#   Order.create(product_id:6,product_name:"pepper",qty:50,price:2,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:100,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:2.99*2,total_saving:4,product_name:"pepper",retail_price:4.99,pomo_price:2.99,created_at:date,updated_at:date)
+# elsif rand(1..10)===7
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:7,product_name:"fish",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
+#   Order.create(product_id:7,product_name:"fish",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"fish",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
+# elsif rand(1..10)===8
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:8,product_name:"chicken",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
+#   Order.create(product_id:8,product_name:"chicken",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"chicken",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
+# elsif rand(1..10)===9
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:9,product_name:"duck",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
+#   Order.create(product_id:9,product_name:"duck",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"duck",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
+# elsif rand(1..10)===10
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:10,product_name:"beef",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
+#   Order.create(product_id:10,product_name:"beef",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"beef",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
+#
+# elsif rand(1..10)===11
+#
+#   date=month[rand(0..19)]
+#   reasonCode=reason[rand(0..3)]
+#   Adjustment.create(reason_code:reasonCode,product_id:11,product_name:"Chicken Caesar Salad",qty_to_adjust:-1,user_id:1,created_by:"admin",total_dollars:4,created_at:date,updated_at:date)
+#   Order.create(product_id:11,product_name:"Chicken Caesar Salad",qty:50,price:5,vendor_name:"good vendor",user_id:1,order_by:"admin",on_order:true,received:false,received_by:"admin",total_dollars:250,created_at:date,updated_at:date)
+#   ProductsSale.create(sales_transcation_id:rand(1..250),product_id:rand(1..11),qty:2,total:8*2,total_saving:4,product_name:"Chicken Caesar salad",retail_price:10,pomo_price:8,created_at:date,updated_at:date)
+# end
+# end
+#
+# SalesTranscation.all.each do |transcation|
+#   month=["2018-01-03","2018-02-03","2018-03-03","2018-04-03","2018-05-03","2018-06-03","2018-07-03","2018-08-03","2017-01-03","2017-02-03","2017-03-03","2017-04-03","2017-05-03","2017-06-03","2017-07-03","2017-08-03","2017-09-03","2017-10-03","2017-11-03","2017-12-03"]
+#   date=month[rand(0..19)]
+#   transcation.update(total:transcation.products_sales.map do |sale|
+#     sale.total
+#   end.sum,
+#   total_saving:transcation.products_sales.map do |sale|
+#     sale.total_saving
+#   end.sum,
+#   cash_from_customer:transcation.products_sales.map do |sale|
+#     sale.total
+#   end.sum+20,
+#   change_to_customer:20,
+#   created_at:date,
+#   updated_at:date)
+# end
+#
+#
+# Product.all.each do |product|
+#   product.update(adjustment:product.adjustments.map do |adjustment|
+#     adjustment.qty_to_adjust
+#   end.sum,
+#   sales:product.products_sales.map do |sale|
+#     sale.qty
+#   end.sum,
+#   inventory:product.adjustments.map do |adjustment|
+#     adjustment.qty_to_adjust
+#   end.sum-product.products_sales.map do |sale|
+#     sale.qty
+#   end.sum
+# )
+# end
+#
+#
+#
 
 
 
