@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   namespace :api do
    namespace :v1 do
      resources :users,:adjustments,:orders,:products,:products_sales,:sales_transcations,:todolists
+     get '/current_user', to: 'users#session_user'
+     post '/login', to: 'auth#create'
+
 
    end
  end

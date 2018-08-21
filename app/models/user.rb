@@ -7,8 +7,10 @@ class User < ApplicationRecord
   has_many :cashier_drawers
 
 
+  has_secure_password
+
   # please also set Username to be unique
   # validates :username, :password, presence: true
 
-  has_secure_password
+
 end

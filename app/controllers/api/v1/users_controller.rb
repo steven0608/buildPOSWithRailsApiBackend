@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   before_action :find_user, only: [:update,:show]
-  # before_action :authenticate, only: [:show, :index, :users_recipes]
-  # before_action :requires_user, only: [:show]
+  # before_action :authenticate, only: [:show, :index]
+  before_action :requires_user, only: [:show]
 
 
 def index
@@ -12,6 +12,8 @@ def index
 end
 
 def show
+
+
   render json: @user, status: 200
 end
 
@@ -28,6 +30,21 @@ def update
    render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
  end
 end
+
+def session_user
+    @user = User.find_by(id: get_token_payload('sub'))
+# byebug
+    if (!!@user)
+      render json: {
+        user_details: @user,
+        todolists:@user.todolists,
+        }
+    else
+      render json: {
+        message: 'Invalid token.'
+      }, status: :unauthorized
+    end
+  end
 
 private
 
