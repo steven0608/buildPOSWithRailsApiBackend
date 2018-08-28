@@ -10,33 +10,11 @@ Admin has all features.
 
 #### if the user login successfully, the token will store in local storage. (token will expired in 2 hours).
 
+### video: https://www.useloom.com/share/d419004501fa46b38a7db6c687e2db34  (it's best to use 2X speed since i talked slow)
 
 
 
 
 
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # buildPOSWithRailsApiBackend
